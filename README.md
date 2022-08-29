@@ -1,2 +1,2 @@
 # joyfulchild.github.io
-thejoyfulchild.care website
+thejoyfulchild.care
