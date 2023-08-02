@@ -7,10 +7,16 @@ nav {
     .company-logo {color: white !important;}
 }
 footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10px;
+    height: 2.5vh;
+    margin-bottom: 1rem;
     a, p {
         color: whitesmoke;
         &:not(:first-child) {
@@ -29,6 +35,7 @@ footer {
 }
 @include breakpoint-up (medium) {
     footer {
+        padding-left: 10vw;
         justify-content: start;
         font-size: $font-xsm;
     }

@@ -190,10 +190,16 @@ nav .company-logo {
 }
 
 footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  height: 2.5vh;
+  margin-bottom: 1rem;
 }
 footer a, footer p {
   color: whitesmoke;
@@ -213,6 +219,7 @@ footer p {
 }
 @media (min-width: 40em) {
   footer {
+    padding-left: 10vw;
     justify-content: start;
     font-size: 0.8rem;
   }
@@ -224,7 +231,7 @@ footer p {
 }
 #landing-page main {
   display: grid;
-  grid-template-rows: 60vh 27.5vh;
+  grid-template-rows: 50vh 27.5vh;
 }
 #landing-page main .header-container {
   display: flex;
@@ -319,6 +326,9 @@ footer p {
   width: 12.5rem;
 }
 @media (min-width: 30em) {
+  #landing-page main {
+    grid-template-rows: 60vh 27.5vh;
+  }
   #landing-page main .header-container header h1 .line-2 .item {
     font-size: 80px;
   }
