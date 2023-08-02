@@ -193,7 +193,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5vh;
+  height: 2.5vh;
   font-size: 10px;
 }
 footer a, footer p {
