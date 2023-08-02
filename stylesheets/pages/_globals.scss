@@ -1,29 +1,123 @@
 html {
+    height: -webkit-fill-available;
     body {
-        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
         font-size: 100%;
         margin: 0rem;
-        background-color: rgb(240, 240, 240);
         box-sizing: border-box;
+        user-select: none !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(to bottom, #5c6bc0, #3f51b5);
+        background-color: #26389c;
+        background-repeat: no-repeat;
+        padding: 1rem;
         *, *::before, *::after {
             box-sizing: inherit;
         }
-
-        // --- global element design ---
-
-        text-align: left;
-        h1 {
-            max-width: 25rem;
-            margin: auto;
-            padding-top: 40vh;
+        @include breakpoint-up (medium) {
+            padding: 1rem 10vw;
         }
-
-        // element design
-        a, a:visited, a:hover {
+        // --- global design ---
+        main {
+            @keyframes fadeInText {
+                0% {opacity: 0;}
+                20% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+            opacity: 0;
+            animation-name: fadeInText;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        h1, h2, h3, h4, p {
+            font-family: 'Open-sans', sans-serif;
+            pointer-events: none;
+        }
+        h1, h2, h3, h4 {
+            font-weight: bold;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: $font-xlg;
+            @include breakpoint-up (large) {
+                font-size: $font-xxlg;
+            }
+        }
+        h2 {
+            font-size: $font-lg;
+            @include breakpoint-up (medium) {
+                font-size: $font-lg;
+            }
+            @include breakpoint-up (large) {
+                font-size: $font-xlg;
+            }
+        }
+        a, p, li {
+            font-family: 'Open-sans', sans-serif;
+            line-height: 1.5;
+        }
+        p > a {
+            pointer-events: all !important;
+        }
+        a, a:visited, button {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
             text-decoration: none;
-            color: rgb(222, 222, 222);
+            color: black;
+            cursor: pointer;
+        }
+        button {
+            font-size: $font-sm;
+            padding: .75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            color: black;
+        }
+        #intlink {
+            font-size: $font-med;
+            color: rgb(1, 73, 96);
+            @include breakpoint-up (small) {
+                &:hover {
+                    color: rgb(100, 0, 125);
+                    transition: .25s;
+                    transition-timing-function: ease-out;
+                }   
+            }
+        }
+        .box-shadow {
+            box-shadow: 5px 5px 10px lightgrey;
+        }
+        // page section design
+        .page-heading {
+            padding: 5rem 10vw 10rem 10vw;
+            color: white;
+            h1 {
+                margin: 0rem;
+            }
+            p {
+                font-size: $font-xmed;
+                margin-top: 1rem;
+            }
+            @include breakpoint-up (medium) {
+                padding: 17.5rem 10vw;
+                p {
+                    max-width: 35rem;
+                }
+            }
+            @include breakpoint-up (large) {
+                padding: 20rem 20vw;
+                height: 100vh;
+                p {
+                    font-size: $font-xmed;
+                }
+            }
+            button {
+                color: white;
+                &:not(:last-child) {
+                    margin-bottom: .375rem;
+                }
+            }
         }
         // functionality
         .flex {
@@ -41,8 +135,16 @@ html {
                 align-items: center;
             }
         }
+        .hover {
+            @include breakpoint-up (small) {
+                transition: transform 250ms;
+                    &:hover {
+                        transform: translateY(-2.5px);
+                    }
+            }
+        }
         .hide-mobile {
-            @include breakpoint-down (medium) {
+            @include breakpoint-down (x-small) {
                 display: none;
             }
         }

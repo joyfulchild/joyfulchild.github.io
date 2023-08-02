@@ -1,0 +1,444 @@
+        // -- data design --
+        #data-container {
+            padding: 10rem 10vw;
+            text-align: center;
+            h2 {
+                font-size: $font-lg;
+            } 
+            #num-val {
+                color: #83c77f;
+                font-size: $font-xlg;
+            }
+            .num-val-txt {
+                max-width: 40rem;
+            }    
+            @include breakpoint-up (medium) {
+                h2 {
+                    width: 32.5rem;
+                }
+                #num-val {
+                    font-size: 48px;
+                }
+                #num-val::before {
+                    top: 9.7rem;
+                }
+                #num-val::after {
+                    left: 85%;
+                }
+            }
+            @include breakpoint-up (large) {
+                h2 {
+                    font-size: $font-xlg;
+                    width: 35rem;
+                    margin: auto;
+                }
+            }
+        }
+        // -- sections design --
+        section {
+            padding: 5rem 0rem;
+            p {
+                font-size: $font-med;
+            }
+            &:nth-child(2) {
+                button {
+                    color: white;
+                }
+            }
+            &:nth-child(4) {
+                button {
+                    background-color: #83c77f;
+                    color: white;
+                }
+            }
+            &:nth-child(5) {
+                button {
+                    color: white;
+                }
+            }
+            &:nth-child(6) {
+                button {
+                    color: white;
+                }
+            }
+            &:nth-child(7) {
+                button {
+                    color: white;
+                }
+                #sub-care-btn {
+                    background-color: #83c77f;
+                    margin-bottom: .5rem;
+                }
+                #pricing-cta-btn {
+                    background-color: rgb(250, 250, 250);
+                    color: black;
+                    border: solid;
+                    border-width: 2px;
+                    border-color: #83c77f;
+                }
+            }
+            &:nth-child(8) {
+                button {
+                    color: white;
+                }
+                img {
+                    filter: invert(75%) sepia(74%) saturate(5677%) hue-rotate(163deg) brightness(96%) contrast(103%);
+                }
+            }
+            &:nth-child(6), &:nth-child(8) {
+                .txtwrapper {
+                    h2 {
+                        margin-top: 0rem !important;
+                        margin-left: 0rem;
+                    }
+                }
+            }
+            .section-container {
+                text-align: left;
+                margin: 2rem 0rem;
+                &:last-child {
+                    margin: 0rem;
+                }
+                .txtwrapper {
+                    padding: 0rem 10vw;
+                    h2 {
+                        max-width: 30rem;
+                        margin-top: 0rem;
+                    }
+                    a {
+                        #fb-icon {
+                            height: 5rem;
+                            width: 5rem;
+                        }
+                    }
+                    #data-list {
+                        ul {
+                            padding: 1rem 0rem;
+                            li {
+                                display: flex;
+                                justify-content: left;
+                                align-items: center;
+                                list-style-type: none;
+                                margin-bottom: 1rem;
+                                font-size: $font-med;
+                                p {
+                                    margin: 0rem 0rem 0rem 1rem;
+                                }
+                            }
+                            li::before {
+                                content: (url(/public/icons/check.svg));
+                                height: 24px;
+                                position: relative;
+                                top: 0rem;
+                                left: .5rem;
+                                border-radius: 100px;
+                                filter: invert(86%) sepia(6%) saturate(1977%) hue-rotate(163deg) brightness(94%) contrast(95%);
+                            }
+                        }
+                    }
+                }
+                .img-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 2.5rem;
+                }
+                .img-team {
+                    display: flex;
+                    justify-content: center;
+                    margin: 2.5rem 0rem 0rem 0rem;
+                    img {
+                        filter: invert(72%) sepia(34%) saturate(2931%) hue-rotate(2deg) brightness(109%) contrast(103%);
+                    }
+                }
+                .img-container, .img-team {
+                    img, .abstract-img {
+                        border-radius: 25px;
+                        height: 17.5rem;
+                        width: 17.5rem;
+                    }
+                }
+                .team-container {
+                    #team-link {
+                        text-align: center;
+                    }
+                }
+                .letter-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    width: 10rem;
+                    margin: auto;
+                    .letter-container {
+                        text-align: center;
+                        display: flex;
+                        padding-top: 2.5rem;
+                        p {
+                            font-size: $font-xlg;
+                            font-weight: 600;
+                            margin-top: 0rem;
+                            margin-bottom: 0rem;
+                            border-radius: 100px;
+                            padding: 0.25rem 1rem;
+                            &:nth-child(1) {
+                                color: #83c77f;
+                            }
+                            &:nth-child(2) {
+                                color: #9cd4e9;
+                            }
+                            &:nth-child(3) {
+                                animation-delay: .25s;
+                                color: #ffc200;
+                            }
+                            &:nth-child(4) {
+                                animation-delay: .5s;
+                                color: #83c77f;
+                            }
+                            &:nth-child(5) {
+                                animation-delay: .75s;
+                                color: #9cd4e9;
+                            }
+                            animation: blow 5s infinite;
+                            @keyframes blow {
+                                0% { transform: translateY(0rem);}
+                                40% { rotate: 5deg;}
+                                50% { transform: translateY(2.5rem);}
+                                100% { transform: translateY(0rem);}
+                            }
+                        }
+                    }
+                }
+                .map-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 2.5rem;
+                    iframe {
+                        width: 80%;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+
+        // landing page
+
+        <header>
+        <h1>
+          <div class="htext">
+            Childcare enriches
+            <div class="sliding-vertical">
+              <span><p>Peace of mind</p></span>
+              <span><p>Social connection</p></span>
+              <span><p>Purpose</p></span>
+              <span><p>Trust</p></span>
+              <span><p>Joy</p></span>
+            </div>
+          </div>
+        </h1>
+        <div class="header-btn-container">
+          <a href="/services.html"><button class="hover" id="btn-1">Learn about us</button></a>
+          <a href="/contact.html"><button class="hover" id="btn-2">Contact us</button></a>
+        </div>
+      </header>
+
+      #landing-page {
+        height: 90vh;
+        main {
+          header {
+            text-align: center;
+            h1 {
+              margin: auto;
+              color: rgb(255, 255, 255);
+              .htext {
+                .sliding-vertical {
+                  span {
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    animation-fill-mode: both;
+                    -webkit-animation-fill-mode: both;
+                  }
+                  span:nth-child(1),
+                  span:nth-child(2),
+                  span:nth-child(3),
+                  span:nth-child(4) {
+                    animation: toptobottom 12.5s linear 0s;
+                    -ms-animation: toptobottom 12.5s linear 0s;
+                    -webkit-animation: toptobottom 12.5s linear 0s;
+                  }
+                  span:nth-child(2) {
+                    animation-delay: 2.5s;
+                    -ms-animation-delay: 2.5s;
+                    -webkit-animation-delay: 2.5s;
+                  }
+                  span:nth-child(3) {
+                    animation-delay: 5s;
+                    -ms-animation-delay: 5s;
+                    -webkit-animation-delay: 5s;
+                  }
+                  span:nth-child(4) {
+                    animation-delay: 7.5s;
+                    -ms-animation-delay: 7.5s;
+                    -webkit-animation-delay: 7.5s;
+                  }
+                  span:nth-child(5) {
+                    animation: toptobottom2 12.5s linear forwards;
+                    -ms-animation: toptobottom2 12.5s linear forwards;
+                    -webkit-animation: toptobottom2 12.5s linear forwards;
+                    animation-delay: 10.75s;
+                    -ms-animation-delay: 10.75s;
+                    -webkit-animation-delay: 10.75s;
+                  }
+                }
+                @keyframes toptobottom {
+                  0% {
+                    opacity: 0;
+                  }
+        
+                  5% {
+                    opacity: 0;
+                    -moz-transform: translateY(-25px);
+                    -webkit-transform: translateY(-25px);
+                    -ms-transform: translateY(-25px);
+                  }
+        
+                  10% {
+                    opacity: 0;
+                    -moz-transform: translateY(0px);
+                    -webkit-transform: translateY(0px);
+                    -ms-transform: translateY(0px);
+                  }
+        
+                  25% {
+                    opacity: 1;
+                    -moz-transform: translateY(0px);
+                    -webkit-transform: translateY(0px);
+                    -ms-transform: translateY(0px);
+                  }
+        
+                  30% {
+                    opacity: 0;
+                    -moz-transform: translateY(25px);
+                    -webkit-transform: translateY(25px);
+                    -ms-transform: translateY(25px);
+                  }
+        
+                  80% {
+                    opacity: 0;
+                  }
+        
+                  100% {
+                    opacity: 0;
+                  }
+                }
+                @keyframes toptobottom2 {
+                  0% {
+                    opacity: 0;
+                  }
+        
+                  5% {
+                    opacity: 0;
+                    transform: translateY(-25px);
+                  }
+        
+                  10% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                  }
+        
+                  100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                  }
+                }
+              }
+            }
+            .header-btn-container {
+              position: relative;
+              top: 25vh;
+              a {
+                #btn-1 {
+                  background-color: #364296;
+                  color: white;
+                  border: none;
+                  border-radius: 77px 66px 88px 44px;
+                  padding: 1rem 2.5rem;
+                } 
+                #btn-2 {
+                  margin-bottom: .5rem;
+                  background-color: transparent;
+                  color: white;
+                  position: relative;
+                  left: 1rem;
+                }         
+                #btn-1::before,
+                #btn-2::before {
+                  content: "";
+                  position: absolute;
+                  width: 0;
+                  height: 2.5px;
+                  bottom: 0;
+                  left: 5;
+                  background-color: white;
+                  transition: width 0.3s ease-in-out;
+                  max-width: 70%;
+                }
+                #btn-2:hover::before {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          // -- responsive design --
+          @include breakpoint-up (small) {
+            height: 100vh;
+            header {
+              padding-top: 20vh;
+              .header-btn-container {
+                top: 15vh;
+              }
+            }
+          }
+          @include breakpoint-up (medium) {
+            header {
+              text-align: center;
+              h1 {
+                max-width: 35rem;
+              }
+              .htext {
+                margin-bottom: 5rem;
+                .sliding-vertical {
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+              .header-btn-container {
+                position: relative;
+                top: 5vh;
+                right: 0rem;
+                a {
+                  #btn-2 {
+                    position: relative;
+                    left: 0rem;
+                  }
+                }
+              }
+            }
+          }
+          @include breakpoint-up (large) {
+            header {
+              .htext {
+                p {
+                  width: 42.5rem;
+                  margin-right: auto;
+                  margin-left: auto;
+                  margin-bottom: 1rem;
+                }
+              }
+              button {
+                position: relative;
+                right: .25rem;
+              }
+            }
+          }
+        }
+      }
