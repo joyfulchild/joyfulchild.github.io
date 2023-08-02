@@ -1,0 +1,339 @@
+#services-page {
+    main {
+        height: 90vh;
+        header {
+            padding: 0vh 10vw 2.5rem 10vw;
+            h1 {
+                margin: auto;
+                color: rgb(255, 255, 255);
+                .text-container {
+                    #hello {
+                        opacity: 0;
+                        animation-name: fadeInText;
+                        animation-duration: .5s;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                    #what,
+                    #would,
+                    #you,
+                    #like,
+                    #to,
+                    #know,
+                    #about,
+                    #us {
+                        opacity: 0;
+                        animation-name: fadeInText;
+                        animation-duration: .025s;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                    #hello {
+                        animation-delay: 0s;
+                    }
+                    #what {
+                        animation-delay: 1.5s;
+                    }
+                    #would {
+                        animation-delay: 1.75s;
+                    }
+                    #you {
+                        animation-delay: 2s;
+                    }
+                    #like {
+                        animation-delay: 2.1s;
+                    }
+                    #to {
+                        animation-delay: 2.2s;
+                    }
+                    #know {
+                        animation-delay: 2.3s;
+                    }
+                    #about {
+                        animation-delay: 2.4s;
+                    }
+                    #us {
+                        animation-delay: 2.5s;
+                    }
+                    .text-container2 {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            .service-container {
+                .service-label-container {
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    animation-name: fadeInText;
+                    animation-duration: .5s;
+                    animation-delay: 3s;
+                    animation-timing-function: ease-in-out;
+                    animation-fill-mode: forwards;
+                    select {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        background: none;
+                        border: none;
+                        font-family: inherit;
+                        font-size: $font-med;
+                        font-family: 'Open-sans', sans-serif;
+                        color: inherit;
+                        width: 15rem;
+                        border: none;
+                        outline: none;
+                        border-radius: 100px;
+                        padding: 1rem 1.75rem;
+                        background-color: white;
+                        cursor: pointer;
+                        background-image: url(/public/icons/expand.svg);
+                        background-repeat: no-repeat;
+                        background-position: right 1rem center;
+                        background-size: 1.5rem;
+                    }
+                }
+                .services-modal {
+                    .modal-container {
+                        .modal-dialog {
+                            opacity: 0;
+                            animation-name: fadeInText;
+                            animation-duration: .25s;
+                            animation-timing-function: ease-in-out;
+                            animation-fill-mode: forwards;
+                            position: relative;
+                            height: 100vh;
+                            min-height: 100%;
+                            width: 100vw;
+                            min-width: 100%;
+                            border: none;
+                            padding: 2.5vh 5vw 0vh 5vw;
+                            margin: 0rem;
+                            .dialog-content {
+                                user-select: none !important;
+                                h2 {
+                                    margin-top: 0rem;
+                                }
+                                h3 {
+                                    font-size: $font-xmed;
+                                }
+                                .modal-button-container {
+                                    position: sticky;
+                                    bottom: 0;
+                                    text-align: center;
+                                    padding: 1.5rem 0rem;
+                                    background-color: white;
+                                    .close-modal, .contact-button {
+                                        font-size: $font-sm;
+                                    }
+                                    .contact-button {
+                                        background-color: #364296;
+                                        color: white;
+                                        border: none;
+                                        border-radius: 77px 66px 88px 44px;
+                                        padding: .75rem 2.5rem;
+                                        width: 10rem;
+                                        transition: .25s;
+                                        &:hover {
+                                            width: 11rem;
+                                            border-radius: 100px;
+                                            transform: translateY(0px) !important;
+                                        }
+                                    }
+                                    .close-modal:focus {
+                                        outline: none;
+                                    }
+                                }
+                                // location
+                                .modal-location-card {
+                                    .location-image {
+                                        height: 100%;
+                                        width: 100%;
+                                        img {
+                                            height: 100%;
+                                            min-height: 20rem;
+                                            max-height: 35vh;
+                                            width: 100%;
+                                            border-radius: 25px;
+                                            object-fit: cover;
+                                            margin: auto;
+                                        }
+                                    }
+                                    .location-data-container {
+                                        .location-data {
+                                            p {margin-top: 0rem;}
+                                            .location-header {
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                padding: 1rem 0rem;
+                                                h3 {
+                                                    margin: 0rem;
+                                                }
+                                                .submit-review {
+                                                    margin-right: .5rem;
+                                                }
+                                                .gmaps:focus {
+                                                    outline: none;
+                                                }
+                                                .gmaps::after {
+                                                    content: "";
+                                                    background-image: url(/public/icons/map.svg);
+                                                    display: inline-block;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    background-size: contain;
+                                                    background-repeat: no-repeat;
+                                                    position: relative;
+                                                    top: 5px;
+                                                    margin-left: 5px;
+                                                }
+                                            }
+                                            .capacity-container, .days-container, .hours-container {
+                                                height: 3rem;
+                                                p, sub {
+                                                    margin: .75rem 0rem 0rem 0rem;
+                                                }
+                                                sub {
+                                                    display: block;
+                                                    position: relative;
+                                                    bottom: .75rem;
+                                                    left: 2.25rem;
+                                                    color: grey;
+                                                    width: fit-content;
+                                                    p {
+                                                        margin-bottom: 0rem;
+                                                    }
+                                                }
+                                            }
+                                            .data {
+                                                padding: 1.5rem 0rem;
+                                            }
+                                            .capacity::before, .days::before, .hours::before {
+                                                display: inline-block;
+                                                width: 20px;
+                                                height: 20px;
+                                                background-size: contain;
+                                                background-repeat: no-repeat;
+                                                position: relative;
+                                                top: 4px;
+                                                margin-right: 15px;
+                                            }
+                                            .capacity::before {
+                                                content: "";
+                                                background-image: url(/public/icons/group.svg);
+                                            }
+                                            .days::before {
+                                                content: "";
+                                                background-image: url(/public/icons/dates.svg);
+                                            }
+                                            .hours::before {
+                                                content: "";
+                                                background-image: url(/public/icons/clock.svg);
+                                            }
+                                        }
+                                    }
+                                }
+                                // pricing
+                                .modal-childcare-cost-card {
+                                    .infant-pricing, .toddler-pricing, .preschooler-pricing {
+                                        height: 20vh;
+                                        width: 100%;
+                                        background-color: #364296;
+                                        border: none;
+                                        border-radius: 10px;
+                                        &:not(:last-child) {
+                                            margin-bottom: 1rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint-up (small) {
+            height: 100vh;
+            header {
+                padding: 10vh 10vw 2.5rem 10vw;
+            }
+            section {
+                .service-container {
+                    .services-modal {
+                        .modal-container {
+                            .modal-dialog {
+                                padding-bottom: 0vh;
+                                .dialog-content {
+                                    .close-modal::before {
+                                        right: 3vw;
+                                    }
+                                    .modal-location-card {
+                                        .location-data-container {
+                                           h3 {
+                                            font-size: $font-lg;
+                                           }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include breakpoint-up (medium) {
+            header {
+                h1 {
+                    max-width: 30rem;
+                    .text-container {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @include breakpoint-up (large) {
+            header {
+                h1 {
+                    max-width: 40rem;
+                    margin: auto;
+                }
+            }
+            section {
+                .service-container {
+                    .services-modal {
+                        .modal-container {
+                            .modal-dialog {
+                                .dialog-content {
+                                    padding-top: 10vh;
+                                    .modal-location-card {
+                                        display: flex;
+                                        justify-content: space-evenly;
+                                        align-items: center;
+                                        .location-image {
+                                            img {
+                                                min-height: 30rem;
+                                                max-width: 40rem;
+                                            }
+                                        }
+                                        .location-data-container {
+                                            width: 50%;
+                                            margin-left: 10%;
+                                            .location-data {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
