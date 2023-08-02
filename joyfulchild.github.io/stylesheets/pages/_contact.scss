@@ -1,0 +1,54 @@
+#contact-page {
+    main {
+        header {
+            background-color: #ffc20085;
+        }
+        header::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 25%;
+            height: 100%;
+            width: 75%;
+            background-color: #ffc20085;
+            border-top-left-radius: 100rem;
+            z-index: -1000;
+            overflow-y: visible;
+        }
+        .section-container {
+            padding: 5rem 10vw;
+            background-color: rgb(250, 250, 250);
+            section {
+                background-color: rgb(250, 250, 250);
+                text-align: center;
+                p {
+                    font-size: $font-med;
+                }
+                .map-container {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 5rem;
+                    iframe {
+                        width: 90vw;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 5px lightgrey;
+                    }
+                }
+                .card-text {
+                    text-align: left;
+                }
+                button {
+                    margin-bottom: 2.5rem;
+                    color: white;
+                }
+            }
+            @include breakpoint-up (medium) {
+                padding-bottom: 7.5rem;
+            }
+            @include breakpoint-up (large) {
+                padding: 15vh 20vw;
+            }
+        }
+    }
+}

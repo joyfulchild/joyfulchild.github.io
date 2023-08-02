@@ -1,0 +1,36 @@
+nav {
+    height: 5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: $font-med;
+    .company-logo {color: white !important;}
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    font-size: 10px;
+    a, p {
+        color: whitesmoke;
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+@include breakpoint-up (small) {
+    footer {
+        font-size: $font-xsm;
+    }
+}
+@include breakpoint-up (medium) {
+    footer {
+        justify-content: start;
+        font-size: $font-xsm;
+    }
+}
