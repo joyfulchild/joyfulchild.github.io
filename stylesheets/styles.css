@@ -231,7 +231,7 @@ footer p {
 }
 #landing-page main {
   display: grid;
-  grid-template-rows: 50vh 27.5vh;
+  grid-template-rows: 60vh 27.5vh;
 }
 #landing-page main .header-container {
   display: flex;
