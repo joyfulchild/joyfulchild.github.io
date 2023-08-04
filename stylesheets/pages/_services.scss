@@ -1,12 +1,17 @@
 #services-page {
+    overflow: hidden;
     main {
-        height: 90vh;
+        display: grid;
+        grid-template-rows: 50vh 27.5vh;
         header {
-            padding: 0vh 10vw 2.5rem 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             h1 {
-                margin: auto;
+                margin: 0rem;
                 color: rgb(255, 255, 255);
-                .text-container {
+                .text-wrapper {
                     #hello {
                         opacity: 0;
                         animation-name: fadeInText;
@@ -100,19 +105,15 @@
                 .services-modal {
                     .modal-container {
                         .modal-dialog {
-                            opacity: 0;
-                            animation-name: fadeInText;
-                            animation-duration: .25s;
-                            animation-timing-function: ease-in-out;
-                            animation-fill-mode: forwards;
-                            position: relative;
+                            position: absolute;
+                            top: -100%;
                             height: 100vh;
                             min-height: 100%;
                             width: 100vw;
                             min-width: 100%;
                             border: none;
-                            padding: 2.5vh 5vw 0vh 5vw;
                             margin: 0rem;
+                            animation: slideDown 1s forwards cubic-bezier(0.16, 1, 0.3, 1);
                             .dialog-content {
                                 user-select: none !important;
                                 h2 {
@@ -253,15 +254,20 @@
                                 }
                             }
                         }
+                        @keyframes slideDown {
+                            0% {
+                              transform: translateY(0);
+                            }
+                            100% {
+                              transform: translateY(100%);
+                            }
+                        } 
                     }
                 }
             }
         }
         @include breakpoint-up (small) {
-            height: 100vh;
-            header {
-                padding: 10vh 10vw 2.5rem 10vw;
-            }
+            grid-template-rows: 40vh 47.5vh;
             section {
                 .service-container {
                     .services-modal {

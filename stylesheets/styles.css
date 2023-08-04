@@ -12,7 +12,7 @@ html body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to bottom, #5c6bc0, #3f51b5);
-  background-color: #26389c;
+  background-color: #1f1f1f;
   background-repeat: no-repeat;
   padding: 1rem;
 }
@@ -353,65 +353,72 @@ footer p {
   }
 }
 
+#services-page {
+  overflow: hidden;
+}
 #services-page main {
-  height: 90vh;
+  display: grid;
+  grid-template-rows: 50vh 27.5vh;
 }
 #services-page main header {
-  padding: 0vh 10vw 2.5rem 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 #services-page main header h1 {
-  margin: auto;
+  margin: 0rem;
   color: rgb(255, 255, 255);
 }
-#services-page main header h1 .text-container #hello {
+#services-page main header h1 .text-wrapper #hello {
   opacity: 0;
   animation-name: fadeInText;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-#services-page main header h1 .text-container #what,
-#services-page main header h1 .text-container #would,
-#services-page main header h1 .text-container #you,
-#services-page main header h1 .text-container #like,
-#services-page main header h1 .text-container #to,
-#services-page main header h1 .text-container #know,
-#services-page main header h1 .text-container #about,
-#services-page main header h1 .text-container #us {
+#services-page main header h1 .text-wrapper #what,
+#services-page main header h1 .text-wrapper #would,
+#services-page main header h1 .text-wrapper #you,
+#services-page main header h1 .text-wrapper #like,
+#services-page main header h1 .text-wrapper #to,
+#services-page main header h1 .text-wrapper #know,
+#services-page main header h1 .text-wrapper #about,
+#services-page main header h1 .text-wrapper #us {
   opacity: 0;
   animation-name: fadeInText;
   animation-duration: 0.025s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
-#services-page main header h1 .text-container #hello {
+#services-page main header h1 .text-wrapper #hello {
   animation-delay: 0s;
 }
-#services-page main header h1 .text-container #what {
+#services-page main header h1 .text-wrapper #what {
   animation-delay: 1.5s;
 }
-#services-page main header h1 .text-container #would {
+#services-page main header h1 .text-wrapper #would {
   animation-delay: 1.75s;
 }
-#services-page main header h1 .text-container #you {
+#services-page main header h1 .text-wrapper #you {
   animation-delay: 2s;
 }
-#services-page main header h1 .text-container #like {
+#services-page main header h1 .text-wrapper #like {
   animation-delay: 2.1s;
 }
-#services-page main header h1 .text-container #to {
+#services-page main header h1 .text-wrapper #to {
   animation-delay: 2.2s;
 }
-#services-page main header h1 .text-container #know {
+#services-page main header h1 .text-wrapper #know {
   animation-delay: 2.3s;
 }
-#services-page main header h1 .text-container #about {
+#services-page main header h1 .text-wrapper #about {
   animation-delay: 2.4s;
 }
-#services-page main header h1 .text-container #us {
+#services-page main header h1 .text-wrapper #us {
   animation-delay: 2.5s;
 }
-#services-page main header h1 .text-container .text-container2 {
+#services-page main header h1 .text-wrapper .text-container2 {
   font-weight: 500;
 }
 #services-page main section {
@@ -451,19 +458,15 @@ footer p {
   background-size: 1.5rem;
 }
 #services-page main section .service-container .services-modal .modal-container .modal-dialog {
-  opacity: 0;
-  animation-name: fadeInText;
-  animation-duration: 0.25s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  position: relative;
+  position: absolute;
+  top: -100%;
   height: 100vh;
   min-height: 100%;
   width: 100vw;
   min-width: 100%;
   border: none;
-  padding: 2.5vh 5vw 0vh 5vw;
   margin: 0rem;
+  animation: slideDown 1s forwards cubic-bezier(0.16, 1, 0.3, 1);
 }
 #services-page main section .service-container .services-modal .modal-container .modal-dialog .dialog-content {
   -webkit-user-select: none !important;
@@ -600,12 +603,17 @@ footer p {
 #services-page main section .service-container .services-modal .modal-container .modal-dialog .dialog-content .modal-childcare-cost-card .infant-pricing:not(:last-child), #services-page main section .service-container .services-modal .modal-container .modal-dialog .dialog-content .modal-childcare-cost-card .toddler-pricing:not(:last-child), #services-page main section .service-container .services-modal .modal-container .modal-dialog .dialog-content .modal-childcare-cost-card .preschooler-pricing:not(:last-child) {
   margin-bottom: 1rem;
 }
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 @media (min-width: 30em) {
   #services-page main {
-    height: 100vh;
-  }
-  #services-page main header {
-    padding: 10vh 10vw 2.5rem 10vw;
+    grid-template-rows: 40vh 47.5vh;
   }
   #services-page main section .service-container .services-modal .modal-container .modal-dialog {
     padding-bottom: 0vh;
