@@ -309,7 +309,7 @@ footer p {
   position: relative;
   right: 0;
   bottom: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 #landing-page main .cta-container a:not(:last-child) {
   margin-right: 1rem;
@@ -326,9 +326,6 @@ footer p {
   width: 12.5rem;
 }
 @media (min-width: 30em) {
-  #landing-page main {
-    grid-template-rows: 60vh 27.5vh;
-  }
   #landing-page main .header-container header h1 .line-2 .item {
     font-size: 80px;
   }
@@ -340,6 +337,9 @@ footer p {
   }
 }
 @media (min-width: 40em) {
+  #landing-page main {
+    grid-template-rows: 55vh 27.5vh;
+  }
   #landing-page main .header-container header h1 .line-2 {
     height: 130px;
   }
