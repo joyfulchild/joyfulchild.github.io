@@ -97,7 +97,7 @@
           border-radius: 77px 66px 88px 44px;
           padding: 1rem 2.5rem;
           transition: .25s;
-          width: 17rem !important;
+          width: 17rem;
         }
       }
     }
@@ -118,9 +118,7 @@
           .learn-more {
             &:hover {
               border-radius: 100px;
-              transform: translateY(0px) !important;
-              width: 17.5rem !important;
-              filter: blur(25%);
+              width: 17.5rem;
             }
           }
         }
