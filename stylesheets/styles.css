@@ -323,7 +323,7 @@ footer p {
   border-radius: 77px 66px 88px 44px;
   padding: 1rem 2.5rem;
   transition: 0.25s;
-  width: 17rem;
+  width: 17rem !important;
 }
 @media (min-width: 30em) {
   #landing-page main .header-container header h1 .line-2 .item {
@@ -332,7 +332,7 @@ footer p {
   #landing-page main .cta-container a .learn-more:hover {
     border-radius: 100px;
     transform: translateY(0px) !important;
-    width: 17.5rem;
+    width: 17.5rem !important;
     filter: blur(25%);
   }
 }
