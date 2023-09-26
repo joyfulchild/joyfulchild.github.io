@@ -250,7 +250,7 @@ footer p {
 }
 #landing-page main .header-container header h1 .line-2 {
   overflow: hidden;
-  height: 90px;
+  height: 100px;
   min-width: 80vw;
 }
 #landing-page main .header-container header h1 .line-2 .dynamic-text {
