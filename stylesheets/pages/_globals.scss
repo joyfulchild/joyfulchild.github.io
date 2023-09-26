@@ -15,7 +15,7 @@ html {
         *, *::before, *::after {
             box-sizing: inherit;
         }
-        @include breakpoint-up (medium) {
+        @include breakpoint-up (small) {
             padding: 1rem 10vw;
         }
         // --- global design ---
@@ -32,7 +32,8 @@ html {
             animation-fill-mode: forwards;
         }
         h1, h2, h3, h4, p {
-            font-family: 'Open-sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400 !important;
             pointer-events: none;
         }
         h1, h2, h3, h4 {
@@ -54,8 +55,9 @@ html {
                 font-size: $font-xlg;
             }
         }
-        a, p, li {
-            font-family: 'Open-sans', sans-serif;
+        a, button, li {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400 !important;
             line-height: 1.5;
         }
         p > a {

@@ -1,10 +1,10 @@
 #landing-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/happy-family.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/public/marking-rocks.jpg);
   background-size: cover;
   background-position: center;
   main {
     display: grid;
-    grid-template-rows: 50vh 27.5vh;
+    grid-template-rows: 45vh 27.5vh;
     .header-container {
       display: flex;
       justify-content: center;
@@ -125,7 +125,7 @@
       }
     }
     @include breakpoint-up (medium) {
-      grid-template-rows: 55vh 27.5vh;
+      grid-template-rows: 50vh 27.5vh;
       .header-container {
         header {
           h1 {
