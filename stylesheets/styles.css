@@ -19,7 +19,7 @@ html body {
 html body *, html body *::before, html body *::after {
   box-sizing: inherit;
 }
-@media (min-width: 40em) {
+@media (min-width: 30em) {
   html body {
     padding: 1rem 10vw;
   }
@@ -43,7 +43,8 @@ html body main {
   }
 }
 html body h1, html body h2, html body h3, html body h4, html body p {
-  font-family: "Open-sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
   pointer-events: none;
 }
 html body h1, html body h2, html body h3, html body h4 {
@@ -71,8 +72,9 @@ html body h2 {
     font-size: 2.441rem;
   }
 }
-html body a, html body p, html body li {
-  font-family: "Open-sans", sans-serif;
+html body a, html body button, html body li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
   line-height: 1.5;
 }
 html body p > a {
@@ -179,7 +181,7 @@ html body .flex-ai-c {
 }
 
 nav {
-  height: 5vh;
+  height: 10vh;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -187,6 +189,9 @@ nav {
 }
 nav .company-logo {
   color: white !important;
+  font-family: "Sacramento", cursive;
+  font-size: 1.953rem;
+  cursor: pointer;
 }
 
 footer {
@@ -225,13 +230,13 @@ footer p {
   }
 }
 #landing-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/public/happy-family.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/public/marking-rocks.jpg);
   background-size: cover;
   background-position: center;
 }
 #landing-page main {
   display: grid;
-  grid-template-rows: 50vh 27.5vh;
+  grid-template-rows: 45vh 27.5vh;
 }
 #landing-page main .header-container {
   display: flex;
@@ -336,7 +341,7 @@ footer p {
 }
 @media (min-width: 40em) {
   #landing-page main {
-    grid-template-rows: 55vh 27.5vh;
+    grid-template-rows: 50vh 27.5vh;
   }
   #landing-page main .header-container header h1 .line-2 {
     height: 130px;
