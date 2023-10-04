@@ -250,7 +250,7 @@ footer p {
 }
 #landing-page main .header-container header h1 .line-2 {
   overflow: hidden;
-  height: 100px;
+  height: 95px;
   min-width: 80vw;
 }
 #landing-page main .header-container header h1 .line-2 .dynamic-text {
@@ -308,35 +308,52 @@ footer p {
   }
 }
 #landing-page main .cta-container {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   position: relative;
   right: 0;
   bottom: 0;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
-#landing-page main .cta-container a:not(:last-child) {
-  margin-right: 1rem;
+#landing-page main .cta-container a .cta1, #landing-page main .cta-container a .cta2 {
+  width: 12rem;
+  padding: 0.75rem;
+  border-width: 1.25px !important;
 }
-#landing-page main .cta-container a .learn-more {
+#landing-page main .cta-container a .cta1 {
   background-color: #364296;
   color: white;
   border: solid;
-  border-width: 2.5px;
   border-color: #707eeb;
   border-radius: 77px 66px 88px 44px;
-  padding: 1rem 2.5rem;
   transition: 0.25s;
-  width: 17rem;
+  margin-bottom: 0.5rem;
+}
+#landing-page main .cta-container a .cta2 {
+  background-color: #364296;
+  color: white;
+  border: solid;
+  border-color: #707eeb;
+  border-radius: 77px 66px 88px 44px;
+  transition: 0.25s;
 }
 @media (min-width: 30em) {
   #landing-page main .header-container header h1 .line-2 .item {
     font-size: 80px;
   }
-  #landing-page main .cta-container a .learn-more:hover {
+  #landing-page main .cta-container a .cta1:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  #landing-page main .cta-container a .cta1:not(:last-child) {
+    margin-right: 1rem;
+  }
+  #landing-page main .cta-container a .cta1:hover, #landing-page main .cta-container a .cta2:hover {
     border-radius: 100px;
-    width: 17.5rem;
+    width: 11rem;
+    background-color: #707eeb;
   }
 }
 @media (min-width: 40em) {
