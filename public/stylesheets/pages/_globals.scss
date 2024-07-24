@@ -1,0 +1,160 @@
+html {
+    height: -webkit-fill-available;
+    body {
+        height: 100%;
+        font-size: 100%;
+        line-height: 30px;
+        margin: 0rem;
+        box-sizing: border-box;
+        user-select: none !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-repeat: no-repeat;
+        background-color: rgb(255, 253, 244);
+        *, *::before, *::after {box-sizing: inherit;}
+
+        // --- global design ---
+        nav, footer {
+            a, a:visited {
+                &:hover {
+                    background-image: linear-gradient(to right,
+                          #FF6347 0%, #FF6347 20%, /* Color 1, spacing */
+                          #66CDAA 20%, #66CDAA 40%, /* Color 2, spacing */
+                          #FFD700 40%, #FFD700 60%, /* Color 3, spacing */
+                          #9370DB 60%, #9370DB 80% /* Color 4, spacing */
+                        );
+                        background-size: 100% 3px; /* Adjust the thickness of the underline */
+                        background-repeat: no-repeat;
+                        background-position: 0 100%;
+                        background-clip: content-box;
+                }
+            }
+        }
+        .content-container {
+            display: grid;
+            overflow-y: scroll;
+            height: 74vh;
+            &::-webkit-scrollbar {display: none;}
+            @include breakpoint-up (small) {
+                height: 86.5vh;
+            }
+            @include breakpoint-up (large) {
+
+            }
+            // Add custom CSS for Medium to Large for each page.
+        }
+        main {
+            height: 74vh;
+            @keyframes fadeInText {
+                0% {opacity: 0;}
+                20% {opacity: 0;}
+                100% {opacity: 1;}
+            }
+            opacity: 0;
+            animation-name: fadeInText;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            @include breakpoint-up (small){
+                height: 86.5vh;
+            }
+            @include breakpoint-up (large) {
+                p {
+                    font-size: $font-med;
+                }
+            }
+        }
+        header {
+            position: relative;
+            @include breakpoint-up (small) {
+                p {font-size: $font-med;}
+            }
+        }
+        h1, h2, h3, h4, p, blockquote {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400 !important;
+            pointer-events: none;
+        }
+        h1, h2, h3, h4 {
+            font-weight: bold;
+            line-height: 1.25;
+        }
+        h1 {
+            font-size: $font-xlg;
+            @include breakpoint-up (large) {
+                font-size: $font-xxlg;
+            }
+        }
+        h2 {
+            font-size: $font-lg;
+            @include breakpoint-up (medium) {
+                font-size: $font-lg;
+            }
+            @include breakpoint-up (large) {
+                font-size: $font-xlg;
+            }
+        }
+        a, button, li {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.5;
+            outline: none;
+        }
+        p > a {
+            pointer-events: all !important;
+            text-decoration: underline;
+            color: rgb(0, 145, 255) !important;
+        }
+        a, a:visited {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+            text-decoration: none;
+            color: black;
+            cursor: pointer !important;
+        }
+        button {
+            font-size: $font-sm;
+            padding: .75rem 1.5rem;
+            border: none;
+            color: black;
+            cursor: pointer;
+        }
+        // functionality
+        .flex {
+            display: flex;
+            &-jc-sb {
+                justify-content: space-between;
+            }
+            &-jc-sa {
+                justify-content: space-around;
+                    }
+            &-jc-c {
+                justify-content: center;
+            }
+            &-ai-c {
+                align-items: center;
+            }
+        }
+        .hover {
+            @include breakpoint-up (small) {
+                transition: transform 250ms;
+                    &:hover {
+                        transform: translateY(-2.5px);
+                    }
+            }
+        }
+        .hide-mobile {
+            @include breakpoint-down (x-small) {
+                display: none;
+            }
+        }
+        .hide-tablet {
+            @include breakpoint-up (small) {
+                display: none;
+            }
+        }
+        .hide-desktop {
+            @include breakpoint-up (large) {
+                display: none;
+            }
+        }
+    }
+}

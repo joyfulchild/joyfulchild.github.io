@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{>head
+      pageTitle=pageTitle
+      metaDescription=metaDescription
+      metaKeywords=metaKeywords
+      ogTitle=ogTitle
+      ogDescription=ogDescription
+      ogImage=ogImage
+      pageUrl=pageUrl
+    }}
+  <body>
+    {{>nav}}
+    {{{body}}}
+    {{>footer}}
+    <script>
+      document.querySelector('.dropdown').addEventListener('click', function() {
+          var dropdownContent = document.querySelector('.dropdown-content');
+          dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+      });
+    </script>
+  </body>
+</html>

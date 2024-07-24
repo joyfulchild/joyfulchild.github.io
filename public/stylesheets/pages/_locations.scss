@@ -1,0 +1,50 @@
+#locations-page {
+    .content-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        header {
+            text-align: center;
+            order: (1);
+            padding: 20vh 7.5vw;
+            font-size: $font-med;
+        }
+        main {
+            height: 74vh;
+            #map-container {
+                height: 100%;
+                width: 100%;
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include breakpoint-up (small) {
+        .content-container {
+            header {
+                padding: 10vh 7.5vw;
+            }
+            main {
+                height: 50vh;
+            }
+        }
+    }
+    @include breakpoint-up (medium) {
+        
+    }
+    @include breakpoint-up (large) {
+        .content-container {
+            overflow: hidden;
+            grid-template-columns: 50vw 50vw;
+            align-items: center;
+            header {
+                text-align: left;
+                order: (0);
+            }
+            main {
+                height: 86.4vh;
+            }
+        }
+    }
+}
