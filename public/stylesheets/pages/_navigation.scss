@@ -1,0 +1,173 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 7.5vw;
+    .company-logo {
+        font-family: 'Sacramento', cursive !important;
+        font-size: $font-lg;
+        cursor: pointer;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .dropdown {
+            .dropbtn {
+                font-size: $font-lg;
+                background-color: transparent;
+                padding: 0rem;
+                border-radius: 0rem;
+            }
+            &:hover .dropdown-content {
+                display: block;
+            }
+            @media screen and (max-width: 63.9375em) {
+                display: inline-block;
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100vw;
+                    padding: 1rem 7.5vw;
+                    background-color: white;
+                    z-index: 1;
+                    font-size: $font-med;
+                    transform: translateY(100%);
+                    animation: slideDown 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                    .hbgr-top-nav-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .dropdown-company-logo {
+                            font-family: 'Sacramento', cursive !important;
+                            font-size: $font-lg;
+                            color: black !important;
+                        }
+                    }
+                    .link-container {
+                        padding-top: 15vh;
+                        a {
+                            color: black !important;
+                            text-decoration: none;
+                            display: block;
+                            text-align: left;
+                            transition: ease-in-out .1s;
+                            &:not(:last-child) {
+                                margin-bottom: 1.75rem;
+                            }                
+                        }
+                    }
+                    .close-btn {
+                        position: relative;
+                        bottom: 5px;
+                        text-align: right;
+                        color: black;
+                        background-color: transparent;
+                        border: none;
+                        font-size: $font-lg;
+                        cursor: pointer;
+                        justify-self: end;
+                        padding: 0.25rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    height: 5vh;
+    padding: 0rem 7.5vw;
+    border-top: solid transparent; /* Make the border transparent */
+    border-width: 2px;
+    position: relative; /* Position the footer relative for the pseudo-element */
+    a, p {
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        img {
+            height: 17.5px;
+            width: 17.5px;
+        }
+    }
+}
+footer::before {
+    content: '';
+    position: absolute;
+    bottom: 5vh;
+    left: 0;
+    right: 0;
+    height: 2px; /* Match the border width */
+    background: linear-gradient(to right,
+        #FF6347 0%, #FF6347 20%, /* Color 1, spacing */
+        #66CDAA 20%, #66CDAA 40%, /* Color 2, spacing */
+        #FFD700 40%, #FFD700 60%, /* Color 3, spacing */
+        #9370DB 60%, #9370DB 80% /* Color 4, spacing */);
+    z-index: 1; /* Ensure the pseudo-element is above the border */
+}
+
+// utility
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@include breakpoint-up (small) {
+    nav, footer {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+    nav {
+        height: 7.5vh;
+    }
+    footer {
+        height: 6vh;
+        font-size: $font-xsm;
+    }
+    footer::before {
+        bottom: 6vh;
+    }
+}
+@include breakpoint-up (medium) {
+    footer {
+        justify-content: start;
+    }
+}
+@include breakpoint-up (large) {
+   nav {
+    .dropdown-content {
+        display: block !important;
+        .dropdown-company-logo {
+            display: none;
+        }
+        a {
+            &:hover {
+                transition: ease-in-out .15s;
+            }
+            &:not(:last-of-type) {
+                margin-right: 2rem;
+            }
+        }
+    }
+    .close-btn, .dropbtn {
+        display: none;
+    }
+   }
+}
