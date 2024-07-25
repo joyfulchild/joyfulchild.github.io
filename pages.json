@@ -1,0 +1,62 @@
+{
+  "index": {
+    "pageTitle": "The Joyful Child",
+    "metaDescription": "We provide an affordable accredited play-based childcare and daycare service.",
+    "metaKeywords": "the joyful child, the joyful child daycare, the joyful child del valle, del valle daycare, austin daycare, del valle child care, austin child care, play based daycare, play based child care, daycare near me",
+    "ogTitle": "The Joyful Child",
+    "ogDescription": "We provide an affordable accredited play-based childcare and daycare service.",
+    "ogImage": "public/src/images/page-asset/landing/looking-bugs.jpg",
+    "pageUrl": "https://thejoyfulchild.care",
+    "content": "This is the home page content."
+  },
+  "about": {
+    "pageTitle": "About - The Joyful Child",
+    "metaDescription": "Learn how our leadership is paving the way to provide real quality childcare.",
+    "metaKeywords": "the joyful child, about the joyful child, Leesa Rodriguez",
+    "ogTitle": "About - The Joyful Child",
+    "ogDescription": "Learn how our leadership is paving the way to provide real quality childcare.",
+    "ogImage": "public/src/images/employees/leesa-rodriguez.png",
+    "pageUrl": "https://thejoyfulchild.care/about",
+    "content": "This is the about page content."
+  },
+  "contact": {
+    "pageTitle": "Contact - The Joyful Child",
+    "metaDescription": "Are you looking for childcare? See how you can contact us about our service and childcare tuition.",
+    "metaKeywords": "the joyful child contact, the joyful child email, the joyful child phone number, child care tuition",
+    "ogTitle": "Contact - The Joyful Child",
+    "ogDescription": "Are you looking for childcare? See how you can contact us about our service and child care tuition.",
+    "ogImage": "public/src/images/page-asset/contact/og-contact.jpg",
+    "pageUrl": "https://thejoyfulchild.care/contact",
+    "content": "This is the contact page content."
+  },
+  "programs": {
+    "pageTitle": "Programs - The Joyful Child",
+    "metaDescription": "Play-based & Nature inspired child care program.",
+    "metaKeywords": "Infant care, Toddler care, Preschool care, play-based child care, play based child care, early childhood education",
+    "ogTitle": "Programs - The Joyful Child",
+    "ogDescription": "Play-based & Nature inspired child care program.",
+    "ogImage": "public/src/images/page-asset/programs/all-children.jpg",
+    "pageUrl": "https://thejoyfulchild.care/programs",
+    "content": "This is the programs page content."
+  },
+  "philosophy": {
+    "pageTitle": "Philosophy - The Joyful Child",
+    "metaDescription": "Children grow best simply by being at the center of their own journey.",
+    "metaKeywords": "child care philosophy, the joyful child philosophy, the joyful child teaching philosophy",
+    "ogTitle": "Philosophy - The Joyful Child",
+    "ogDescription": "Children grow best simply by being at the center of their own journey.",
+    "ogImage": "public/src/images/page-asset/philosophy/child-centered.jpg",
+    "pageUrl": "https://thejoyfulchild.care/philosophy",
+    "content": "This is the philosophy page content."
+  },
+  "locations": {
+    "pageTitle": "Locations - The Joyful Child",
+    "metaDescription": "We provide child care for East Austin and Del Valle families.",
+    "metaKeywords": "the joyful child locations, child care near me, daycare near me, austin child care, del valle child care, austin daycare, del valle daycare, East Austin, Del Valle",
+    "ogTitle": "Locations - The Joyful Child",
+    "ogDescription": "We provide child care for East Austin and Del Valle families.",
+    "ogImage": "public/src/images/page-asset/contact/hornsby-bend-location.jpg",
+    "pageUrl": "https://thejoyfulchild.care/locations",
+    "content": "This is the locations page content."
+  }
+}
