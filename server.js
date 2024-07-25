@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define webpage routes
 app.get('/', (req, res) => {
-  res.render('index', {
+  res.render('views/index', {
     pageTitle: 'The Joyful Child',
     metaDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
     metaKeywords: 'the joyful child, the joyful child daycare, the joyful child del valle, del valle daycare, austin daycare, del valle child care, austin child care, play based daycare, play based child care, daycare near me',
