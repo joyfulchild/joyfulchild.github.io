@@ -3,7 +3,7 @@
         header {
             padding: 17vh 7.5vw;
             height: 74vh;
-            background-image: url(/src/images/page-asset/programs/all-children.jpg);
+            background-image: url(/public/src/images/page-asset/programs/all-children.jpg);
             background-size: cover;
             background-position: center;
             h1, p, a {color: white;}
@@ -27,21 +27,21 @@
             }
             #infant-care {
                 .program-image {
-                    background-image: url(/src/images/page-asset/programs/infant.jpg);
+                    background-image: url(/public/src/images/page-asset/programs/infant.jpg);
                     background-size: cover;
                     background-position: 90% 0%;
                 }
             }
             #toddler-care {
                 .program-image {
-                    background-image: url(/src/images/page-asset/programs/toddler.jpg);
+                    background-image: url(/public/src/images/page-asset/programs/toddler.jpg);
                     background-size: cover;
                     background-position: center;
                 }
             }
             #preschool-care {
                 .program-image {
-                    background-image: url(/src/images/page-asset/programs/preschool.jpg);
+                    background-image: url(/public/src/images/page-asset/programs/preschool.jpg);
                     background-size: cover;
                     background-position: center;
                 }

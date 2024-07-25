@@ -506,12 +506,12 @@ footer::before {
   margin: 0rem;
 }
 #contact-page .content-container main #eth {
-  background-image: url(/src/images/page-asset/contact/east-travis-hills-location.jpg);
+  background-image: url(/public/src/images/page-asset/contact/east-travis-hills-location.jpg);
   background-size: cover;
   background-position: center;
 }
 #contact-page .content-container main #hb {
-  background-image: url(/src/images/page-asset/contact/hornsby-bend-location.jpg);
+  background-image: url(/public/src/images/page-asset/contact/hornsby-bend-location.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -552,7 +552,7 @@ footer::before {
 }
 .philosophy-page .content-container header {
   position: relative;
-  background-image: url(/src/images/page-asset/philosophy/child-centered.jpg);
+  background-image: url(/public/src/images/page-asset/philosophy/child-centered.jpg);
   background-size: cover;
   background-position: center;
   height: 74vh;
@@ -573,12 +573,12 @@ footer::before {
   height: 74vh;
 }
 .philosophy-page .content-container main .section-container .section-box #section-img1 {
-  background-image: url(/src/images/page-asset/philosophy/curiosity.jpg);
+  background-image: url(/public/src/images/page-asset/philosophy/curiosity.jpg);
   background-size: cover;
   background-position: center;
 }
 .philosophy-page .content-container main .section-container .section-box #section-img2 {
-  background-image: url(/src/images/page-asset/philosophy/jean.jpg);
+  background-image: url(/public/src/images/page-asset/philosophy/jean.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -597,7 +597,7 @@ footer::before {
   padding: 0rem;
 }
 .philosophy-page .content-container main .section-container .section-box #section-img3 {
-  background-image: url(/src/images/page-asset/philosophy/creativity-trust.jpg);
+  background-image: url(/public/src/images/page-asset/philosophy/creativity-trust.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -667,7 +667,7 @@ footer::before {
 #programs-page .content-container header {
   padding: 17vh 7.5vw;
   height: 74vh;
-  background-image: url(/src/images/page-asset/programs/all-children.jpg);
+  background-image: url(/public/src/images/page-asset/programs/all-children.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -689,17 +689,17 @@ footer::before {
   height: 74vh;
 }
 #programs-page .content-container main #infant-care .program-image {
-  background-image: url(/src/images/page-asset/programs/infant.jpg);
+  background-image: url(/public/src/images/page-asset/programs/infant.jpg);
   background-size: cover;
   background-position: 90% 0%;
 }
 #programs-page .content-container main #toddler-care .program-image {
-  background-image: url(/src/images/page-asset/programs/toddler.jpg);
+  background-image: url(/public/src/images/page-asset/programs/toddler.jpg);
   background-size: cover;
   background-position: center;
 }
 #programs-page .content-container main #preschool-care .program-image {
-  background-image: url(/src/images/page-asset/programs/preschool.jpg);
+  background-image: url(/public/src/images/page-asset/programs/preschool.jpg);
   background-size: cover;
   background-position: center;
 }
