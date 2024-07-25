@@ -9,8 +9,8 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the public directory with /public prefix
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Define webpage routes
 app.get('/', (req, res) => {

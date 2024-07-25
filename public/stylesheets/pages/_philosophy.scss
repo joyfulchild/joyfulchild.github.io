@@ -5,7 +5,7 @@
         &::-webkit-scrollbar {display: none;}
         header {
             position: relative;
-            background-image: url(/src/images/page-asset/philosophy/child-centered.jpg);
+            background-image: url(/public/src/images/page-asset/philosophy/child-centered.jpg);
             background-size: cover;
             background-position: center;
             height: 74vh;
@@ -27,12 +27,12 @@
                         height: 74vh;
                     }
                     #section-img1 {
-                        background-image: url(/src/images/page-asset/philosophy/curiosity.jpg);
+                        background-image: url(/public/src/images/page-asset/philosophy/curiosity.jpg);
                         background-size: cover;
                         background-position: center;
                     }
                     #section-img2 {
-                        background-image: url(/src/images/page-asset/philosophy/jean.jpg);
+                        background-image: url(/public/src/images/page-asset/philosophy/jean.jpg);
                         background-size: cover;
                         background-position: center;
                         position: relative;
@@ -51,7 +51,7 @@
                         }
                     }
                     #section-img3 {
-                        background-image: url(/src/images/page-asset/philosophy/creativity-trust.jpg);
+                        background-image: url(/public/src/images/page-asset/philosophy/creativity-trust.jpg);
                         background-size: cover;
                         background-position: center;
                     }
