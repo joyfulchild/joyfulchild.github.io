@@ -1,0 +1,21 @@
+#about-page {
+    .content-container {
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    @include breakpoint-up (small) {
+
+    }
+    @include breakpoint-up (medium) {
+        .content-container {
+            iframe {
+                padding: 0rem 7.5vw;
+            }
+        }
+    }
+    @include breakpoint-up (large) {
+
+    }
+}
