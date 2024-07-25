@@ -7,14 +7,14 @@ const app = express();
 // Set Handlebars as the view engine
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, ''));
 
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Define webpage routes
 app.get('/', (req, res) => {
-  res.render('views/index', {
+  res.render('index', {
     pageTitle: 'The Joyful Child',
     metaDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
     metaKeywords: 'the joyful child, the joyful child daycare, the joyful child del valle, del valle daycare, austin daycare, del valle child care, austin child care, play based daycare, play based child care, daycare near me',
