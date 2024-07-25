@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     // Open Graph
     ogTitle: 'The Joyful Child',
     ogDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
-    ogImage: 'public/src/images/page-asset/landing/looking-bugs.jpg',
+    ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
     pageUrl: 'https://thejoyfulchild.care',
   });
 });
