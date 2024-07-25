@@ -4,7 +4,7 @@ const handlebars = require('handlebars');
 
 // Define the directories
 const viewsDir = path.join(__dirname, 'views');
-const outputDir = path.join(__dirname, 'public');
+const outputDir = path.join(__dirname, '.');  // Root directory for GitHub Pages
 const layoutsDir = path.join(viewsDir, 'layouts');
 const partialsDir = path.join(viewsDir, 'partials');
 
@@ -32,7 +32,7 @@ function compileTemplates(srcDir, destDir) {
         items.forEach(item => {
             const srcPath = path.join(srcDir, item);
             const pageName = path.basename(srcPath, '.hbs');
-            const destPath = pageName === 'index'
+            const outputPath = pageName === 'index'
                 ? path.join(destDir, 'index.html')
                 : path.join(destDir, pageName, 'index.html');
 
@@ -58,11 +58,6 @@ function compileTemplates(srcDir, destDir) {
                             ...pageData,
                             body: template(pageData)
                         });
-
-                        // Adjust destination path for clean URLs
-                        const outputPath = pageName === 'index'
-                            ? path.join(destDir, 'index.html')
-                            : path.join(destDir, pageName, 'index.html');
 
                         fs.mkdir(path.dirname(outputPath), { recursive: true }, (err) => {
                             if (err) throw err;
