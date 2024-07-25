@@ -4,7 +4,7 @@ const handlebars = require('handlebars');
 
 // Define the directories
 const viewsDir = path.join(__dirname, 'views');
-const outputDir = path.join(__dirname, 'public');
+const outputDir = path.join(__dirname);
 const layoutsDir = path.join(viewsDir, 'layouts');
 const partialsDir = path.join(viewsDir, 'partials');
 
