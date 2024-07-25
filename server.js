@@ -33,7 +33,7 @@ app.get('/about', (req, res) => {
     // Open Graph
     ogTitle: 'About - The Joyful Child',
     ogDescription: 'Learn how our leadership is paving the way to provide real quality childcare.',
-    ogImage: 'public/src/images/employees/leesa-rodriguez.png',
+    ogImage: '/public/src/images/employees/leesa-rodriguez.png',
     pageUrl: 'https://thejoyfulchild.care/about',
   });
 });
@@ -45,7 +45,7 @@ app.get('/contact', (req, res) => {
     // Open Graph
     ogTitle: 'Contact - The Joyful Child',
     ogDescription: 'Are you looking for childcare? See how you can contact us about our service and child care tuition.',
-    ogImage: 'public/src/images/page-asset/contact/og-contact.jpg',
+    ogImage: '/public/src/images/page-asset/contact/og-contact.jpg',
     pageUrl: 'https://thejoyfulchild.care/contact',
   });
 });
@@ -57,7 +57,7 @@ app.get('/programs', (req, res) => {
     // Open Graph
     ogTitle: 'Programs - The Joyful Child',
     ogDescription: 'Play-based & Nature inspired child care program.',
-    ogImage: 'public/src/images/page-asset/programs/all-children.jpg',
+    ogImage: '/public/src/images/page-asset/programs/all-children.jpg',
     pageUrl: 'https://thejoyfulchild.care/programs',
   });
 });
@@ -69,7 +69,7 @@ app.get('/philosophy', (req, res) => {
     // Open Graph
     ogTitle: 'Philosophy - The Joyful Child',
     ogDescription: 'Children grow best simply by being at the center of their own journey.',
-    ogImage: 'public/src/images/page-asset/philosophy/child-centered.jpg',
+    ogImage: '/public/src/images/page-asset/philosophy/child-centered.jpg',
     pageUrl: 'https://thejoyfulchild.care/programs',
   });
 });
@@ -81,7 +81,7 @@ app.get('/locations', (req, res) => {
     // Open Graph
     ogTitle: 'Locations - The Joyful Child',
     ogDescription: 'We provide child care for East Austin and Del Valle families.',
-    ogImage: 'public/src/images/page-asset/contact/hornsby-bend-location.jpg',
+    ogImage: '/public/src/images/page-asset/contact/hornsby-bend-location.jpg',
     pageUrl: 'https://thejoyfulchild.care/locations',
   });
 });
