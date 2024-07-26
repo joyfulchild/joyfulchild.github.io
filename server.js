@@ -33,7 +33,7 @@ app.get('/about', (req, res) => {
     // Open Graph
     ogTitle: 'About - The Joyful Child',
     ogDescription: 'Learn how our leadership is paving the way to provide real quality childcare.',
-    ogImage: '/public/src/images/employees/leesa-rodriguez.png',
+    ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
     pageUrl: 'https://thejoyfulchild.care/about',
   });
 });
