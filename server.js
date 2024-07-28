@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.render('index', {
     pageTitle: 'The Joyful Child',
     metaDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
-    metaKeywords: 'the joyful child, the joyful child daycare, the joyful child del valle, del valle daycare, austin daycare, del valle child care, austin child care, play based daycare, play based child care, daycare near me',
+    metaKeywords: 'the joyful child, the joyful child daycare, the joyful child del valle, del valle daycare, austin daycare, del valle child care, austin child care, play based daycare, play based child care, daycare near me, preschools in austin, preschools in del valle',
     // Open Graph
     ogTitle: 'The Joyful Child',
     ogDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
