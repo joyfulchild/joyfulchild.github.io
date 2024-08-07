@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     ogTitle: 'The Joyful Child',
     ogDescription: 'We provide an affordable accredited play-based childcare and daycare service.',
     ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
-    pageUrl: 'https://thejoyfulchild.care',
+    pageUrl: 'https://thejoyfulchild.care/',
   });
 });
 app.get('/about', (req, res) => {
@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
     ogTitle: 'About - The Joyful Child',
     ogDescription: 'Learn how our leadership is paving the way to provide real quality childcare.',
     ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
-    pageUrl: 'https://thejoyfulchild.care/about',
+    pageUrl: 'https://thejoyfulchild.care/about/',
   });
 });
 app.get('/contact', (req, res) => {
@@ -46,7 +46,7 @@ app.get('/contact', (req, res) => {
     ogTitle: 'Contact - The Joyful Child',
     ogDescription: 'Are you looking for childcare? See how you can contact us about our service and child care tuition.',
     ogImage: '/public/src/images/page-asset/contact/og-contact.jpg',
-    pageUrl: 'https://thejoyfulchild.care/contact',
+    pageUrl: 'https://thejoyfulchild.care/contact/',
   });
 });
 app.get('/programs', (req, res) => {
@@ -58,7 +58,7 @@ app.get('/programs', (req, res) => {
     ogTitle: 'Programs - The Joyful Child',
     ogDescription: 'Play-based & Nature inspired child care program.',
     ogImage: '/public/src/images/page-asset/programs/all-children.jpg',
-    pageUrl: 'https://thejoyfulchild.care/programs',
+    pageUrl: 'https://thejoyfulchild.care/programs/',
   });
 });
 app.get('/philosophy', (req, res) => {
@@ -70,7 +70,7 @@ app.get('/philosophy', (req, res) => {
     ogTitle: 'Philosophy - The Joyful Child',
     ogDescription: 'Children grow best simply by being at the center of their own journey.',
     ogImage: '/public/src/images/page-asset/philosophy/child-centered.jpg',
-    pageUrl: 'https://thejoyfulchild.care/programs',
+    pageUrl: 'https://thejoyfulchild.care/philosophy/',
   });
 });
 app.get('/locations', (req, res) => {
@@ -82,7 +82,7 @@ app.get('/locations', (req, res) => {
     ogTitle: 'Locations - The Joyful Child',
     ogDescription: 'We provide child care for East Austin and Del Valle families.',
     ogImage: '/public/src/images/page-asset/contact/hornsby-bend-location.jpg',
-    pageUrl: 'https://thejoyfulchild.care/locations',
+    pageUrl: 'https://thejoyfulchild.care/locations/',
   });
 });
 
