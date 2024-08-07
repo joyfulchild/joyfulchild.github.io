@@ -11,13 +11,21 @@ const partialsDir = path.join(viewsDir, 'partials');
 // Load page metadata
 const pages = JSON.parse(fs.readFileSync(path.join(__dirname, 'pages.json'), 'utf-8'));
 
-// Register partials
-fs.readdirSync(partialsDir).forEach(file => {
-    const partialPath = path.join(partialsDir, file);
-    const partialName = path.basename(file, '.hbs');
-    const partialContent = fs.readFileSync(partialPath, 'utf-8');
-    handlebars.registerPartial(partialName, partialContent);
-});
+// Register partials (including those in subdirectories)
+function registerPartials(dir, base = '') {
+    fs.readdirSync(dir).forEach(file => {
+        const fullPath = path.join(dir, file);
+        const partialName = path.join(base, path.basename(file, '.hbs')).replace(/\\/g, '/');
+        if (fs.statSync(fullPath).isDirectory()) {
+            registerPartials(fullPath, partialName);
+        } else if (path.extname(file) === '.hbs') {
+            const partialContent = fs.readFileSync(fullPath, 'utf-8');
+            handlebars.registerPartial(partialName, partialContent);
+        }
+    });
+}
+
+registerPartials(partialsDir);
 
 // Compile the main layout template
 const layoutPath = path.join(layoutsDir, 'main.hbs');
@@ -40,30 +48,26 @@ function compileTemplates(srcDir, destDir) {
                 if (err) throw err;
 
                 if (stat.isDirectory()) {
-                    // Create corresponding directory in the output
-                    fs.mkdir(path.join(destDir, item), { recursive: true }, (err) => {
-                        if (err) throw err;
-                        compileTemplates(srcPath, path.join(destDir, item));
-                    });
-                } else if (path.extname(srcPath) === '.hbs') {
-                    // Read and compile .hbs file
+                    compileTemplates(srcPath, destDir); // Flatten structure
+                } else if (path.extname(srcPath) === '.hbs' && !srcPath.includes('layouts') && !srcPath.includes('partials')) {
                     fs.readFile(srcPath, 'utf-8', (err, content) => {
                         if (err) throw err;
 
                         const template = handlebars.compile(content);
                         const pageData = pages[pageName] || {};
 
-                        // Combine template content with layout
                         const result = layoutTemplate({
                             ...pageData,
                             body: template(pageData)
                         });
 
-                        fs.mkdir(path.dirname(outputPath), { recursive: true }, (err) => {
+                        // Create directory for each page and write index.html inside it
+                        const dirPath = pageName === 'index' ? destDir : path.join(destDir, pageName);
+                        fs.mkdir(dirPath, { recursive: true }, (err) => {
                             if (err) throw err;
-                            fs.writeFile(outputPath, result, (err) => {
+                            fs.writeFile(path.join(dirPath, 'index.html'), result, (err) => {
                                 if (err) throw err;
-                                console.log(`Compiled ${srcPath} to ${outputPath}`);
+                                console.log(`Compiled ${srcPath} to ${path.join(dirPath, 'index.html')}`);
                             });
                         });
                     });
@@ -73,7 +77,7 @@ function compileTemplates(srcDir, destDir) {
     });
 }
 
-// Ensure the output directory exists
+// Ensure the output directory exists and compile templates
 fs.mkdir(outputDir, { recursive: true }, (err) => {
     if (err) throw err;
     compileTemplates(viewsDir, outputDir);
