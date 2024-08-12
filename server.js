@@ -15,11 +15,11 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // Define webpage routes
 app.get('/', (req, res) => {
   res.render('index', {
-    pageTitle: 'The Joyful Child | Childcare & Preschool',
+    pageTitle: 'Childcare & Preschool - The Joyful Child',
     metaDescription: 'We provide accredited play-based child care that feels like home.',
     metaKeywords: 'the joyful child, the joyful child daycare, del valle daycare, austin daycare, del valle child care, austin child care, play-based daycare, play-based child care, daycare near me, preschool in austin, preschool in del valle',
     // Open Graph
-    ogTitle: 'The Joyful Child | Childcare & Preschool',
+    ogTitle: 'Childcare & Preschool - The Joyful Child',
     ogDescription: 'We provide accredited play-based child care that feels like home.',
     ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
     pageUrl: 'https://thejoyfulchild.care/',
