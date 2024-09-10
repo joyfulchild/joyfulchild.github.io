@@ -80,6 +80,12 @@
                 section {
                     max-width: 50vw;
                 }
+                #hb {
+                    border-bottom-left-radius: 20px;
+                }
+                #eth {
+                    border-top-left-radius: 20px;
+                }
             }
             main::-webkit-scrollbar { 
                 display: none;  /* Safari and Chrome */
