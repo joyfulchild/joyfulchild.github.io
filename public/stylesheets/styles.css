@@ -14,6 +14,7 @@ html body {
   -moz-osx-font-smoothing: grayscale;
   background-repeat: no-repeat;
   background-color: rgb(255, 253, 244);
+  overflow: hidden !important;
 }
 html body *, html body *::before, html body *::after {
   box-sizing: inherit;
@@ -28,10 +29,13 @@ html body nav a:hover, html body nav a:visited:hover, html body footer a:hover, 
 html body .content-container {
   display: grid;
   overflow-y: scroll;
-  height: 74vh;
+  height: 76.5vh;
 }
 html body .content-container::-webkit-scrollbar {
   display: none;
+}
+html body .content-container p {
+  font-size: 1.25rem;
 }
 @media (min-width: 30em) {
   html body .content-container {
@@ -39,7 +43,7 @@ html body .content-container::-webkit-scrollbar {
   }
 }
 html body main {
-  height: 74vh;
+  height: 76.5vh;
   opacity: 0;
   animation-name: fadeInText;
   animation-duration: 1s;
@@ -123,33 +127,10 @@ html body a, html body a:visited {
 }
 html body button {
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   border: none;
   color: black;
   cursor: pointer;
-}
-html body .flex {
-  display: flex;
-}
-html body .flex-jc-sb {
-  justify-content: space-between;
-}
-html body .flex-jc-sa {
-  justify-content: space-around;
-}
-html body .flex-jc-c {
-  justify-content: center;
-}
-html body .flex-ai-c {
-  align-items: center;
-}
-@media (min-width: 30em) {
-  html body .hover {
-    transition: transform 250ms;
-  }
-  html body .hover:hover {
-    transform: translateY(-2.5px);
-  }
 }
 @media (max-width: 29.9999em) {
   html body .hide-mobile {
@@ -167,88 +148,89 @@ html body .flex-ai-c {
   }
 }
 
+/* General styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  padding: 0rem 7.5vw;
+  height: 7.5vh;
+  padding: 0 7.5vw;
+  background-color: rgb(255, 253, 244);
+  /* Hamburger menu for mobile */
 }
 nav .company-logo {
   font-family: "Sacramento", cursive !important;
-  font-size: 1.953rem;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+nav .menu-toggle {
+  display: none; /* Hide the checkbox */
+}
+nav .hamburger-icon {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1rem;
+  height: 1.5rem;
   cursor: pointer;
 }
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav ul .dropdown .dropbtn {
-  font-size: 1.953rem;
-  background-color: transparent;
-  padding: 0rem;
-  border-radius: 0rem;
-}
-nav ul .dropdown:hover .dropdown-content {
+nav .hamburger-icon span {
   display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: #000;
+  transition: 0.3s;
 }
-@media screen and (max-width: 63.9375em) {
-  nav ul .dropdown {
-    display: inline-block;
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav .nav-links li a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    /* Checkbox hack for toggling menu */
+    /* Transform the hamburger icon into a close (X) */
   }
-  nav ul .dropdown .dropdown-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100vw;
-    padding: 1rem 7.5vw;
-    background-color: white;
-    z-index: 1;
-    font-size: 1.25rem;
-    transform: translateY(100%);
-    animation: slideDown 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-  nav ul .dropdown .dropdown-content .hbgr-top-nav-container {
+  nav .hamburger-icon {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
-  nav ul .dropdown .dropdown-content .hbgr-top-nav-container .dropdown-company-logo {
-    font-family: "Sacramento", cursive !important;
-    font-size: 1.953rem;
-    color: black !important;
-  }
-  nav ul .dropdown .dropdown-content .link-container {
-    padding-top: 15vh;
-  }
-  nav ul .dropdown .dropdown-content .link-container a {
-    color: black !important;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: ease-in-out 0.1s;
-  }
-  nav ul .dropdown .dropdown-content .link-container a:not(:last-child) {
-    margin-bottom: 1.75rem;
-  }
-  nav ul .dropdown .dropdown-content .close-btn {
     position: relative;
-    bottom: 5px;
-    text-align: right;
-    color: black;
-    background-color: transparent;
-    border: none;
-    font-size: 1.953rem;
-    cursor: pointer;
-    justify-self: end;
-    padding: 0.25rem;
+  }
+  nav .nav-links {
+    position: absolute;
+    top: 7.5vh;
+    right: -100%; /* Move the menu off-screen */
     width: 100%;
+    height: 76.5vh;
+    padding: 0rem;
+    margin: 0rem;
+    background-color: rgb(255, 253, 244);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    transition: right 0.3s ease-in-out; /* Animate the `right` property */
+    z-index: 100000;
+    font-size: 1.563rem;
+  }
+  nav .menu-toggle:checked ~ .nav-links {
+    right: 0; /* Bring the menu back on screen */
+  }
+  nav .menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5.5px, 5.5px);
+  }
+  nav .menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  nav .menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(5.5px, -5.5px);
   }
 }
 
@@ -291,7 +273,7 @@ footer::before {
     transform: translateY(-100%);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(-26%);
   }
 }
 @media (min-width: 30em) {
@@ -300,6 +282,9 @@ footer::before {
   }
   nav {
     height: 7.5vh;
+  }
+  nav .nav-links {
+    top: 7.5vh;
   }
   footer {
     height: 6vh;
@@ -430,7 +415,6 @@ footer::before {
   position: relative;
   right: 0;
   bottom: 0;
-  margin-bottom: 2.5rem;
 }
 #landing-page main .cta-container a .cta1 {
   margin-top: 1.5rem;
@@ -464,82 +448,86 @@ footer::before {
 #contact-page .content-container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 40vh 36.5vh;
 }
 #contact-page .content-container header {
-  height: 50vh;
-  background-color: rgb(98, 131, 36);
-  color: white;
-  padding: 10vh 7.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 7.5vw;
 }
-#contact-page .content-container header p {
-  max-width: 35rem;
-  margin: auto;
-}
-#contact-page .content-container header #tuition-notice {
-  margin-top: 1rem;
+#contact-page .content-container main {
+  height: 100%;
 }
 #contact-page .content-container main section {
-  position: relative;
-  height: 74vh;
+  width: 100vw;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-page .content-container main section:not(:first-child) {
+  margin-top: 2.5vh;
+}
+#contact-page .content-container main section button {
+  border-radius: 100px;
+  background-color: white;
+  color: black;
+  border-width: 2.5px;
+  border-top-color: #FF6347; /* Tomato */
+  border-right-color: #66CDAA; /* Medium Aquamarine */
+  border-bottom-color: #FFD700; /* Gold */
+  border-left-color: #9370DB; /* Medium Purple */
+  border-style: dashed;
 }
 #contact-page .content-container main section .text-container {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0rem 7.5vw;
-  background-color: white;
-  height: 24.6vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
 }
 #contact-page .content-container main section .text-container h2 {
-  font-size: 1.563rem;
-  margin-bottom: 0rem;
-}
-#contact-page .content-container main section .text-container ul {
-  padding: 0rem;
-}
-#contact-page .content-container main section .text-container ul li {
-  list-style: none;
-  line-height: 30px;
-}
-#contact-page .content-container main section .text-container ul li p {
-  font-size: 1rem !important;
-  margin: 0rem;
-}
-#contact-page .content-container main #eth {
-  background-image: url(/public/src/images/page-asset/contact/east-travis-hills-location.jpg);
-  background-size: cover;
-  background-position: center;
+  border: none;
+  border-radius: 75px 25px 50px 0px;
 }
 #contact-page .content-container main #hb {
   background-image: url(/public/src/images/page-asset/contact/hornsby-bend-location.jpg);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
-@media (min-width: 30em) {
-  #contact-page .content-container header {
-    text-align: center;
-    padding-top: 20vh;
-    height: 74vh;
-  }
+#contact-page .content-container main #hb h2 {
+  background-color: rgba(255, 99, 71, 0.8352941176);
+}
+#contact-page .content-container main #eth {
+  background-image: url(/public/src/images/page-asset/contact/east-travis-hills-location.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#contact-page .content-container main #eth h2 {
+  background-color: rgba(102, 205, 171, 0.8235294118);
 }
 @media (min-width: 64em) {
-  #contact-page .content-container main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 5vw;
-         column-gap: 5vw;
+  #contact-page .content-container {
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+  #contact-page .content-container header {
+    display: block;
+    text-align: left;
     padding: 0rem 7.5vw;
-    position: relative;
-    bottom: 7.5vh;
-    height: 100% !important;
+  }
+  #contact-page .content-container main {
+    max-height: 86.5vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
   }
   #contact-page .content-container main section {
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50vw;
   }
-  #contact-page .content-container main section .text-container {
-    border-radius: 0px 0px 20px 20px;
-    padding: 0rem 2.5vw;
+  #contact-page .content-container main::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
 }
 
@@ -564,13 +552,12 @@ footer::before {
   position: absolute;
   bottom: 0;
   padding: 0rem 7.5vw;
-  text-shadow: 1px 1px 2px rgba(15, 15, 15, 0.5);
 }
 .philosophy-page .content-container main .section-container .section-box .text-box {
-  padding: 18.5vh 5vw;
+  padding: 7.5vh 7.5vw;
 }
 .philosophy-page .content-container main .section-container .section-box #section-img1, .philosophy-page .content-container main .section-container .section-box #section-img2, .philosophy-page .content-container main .section-container .section-box #section-img3 {
-  height: 74vh;
+  height: 54vh;
 }
 .philosophy-page .content-container main .section-container .section-box #section-img1 {
   background-image: url(/public/src/images/page-asset/philosophy/curiosity.jpg);
@@ -607,6 +594,7 @@ footer::before {
   text-align: center;
   background-color: rgb(98, 131, 36);
   height: 74vh;
+  padding: 0rem 7.5vw;
 }
 .philosophy-page .content-container main .section-container #section4 .text-box {
   position: relative;
@@ -627,6 +615,14 @@ footer::before {
     max-width: 35rem;
     text-align: right;
     padding: 0rem;
+  }
+  .philosophy-page .content-container main .section-container #section4 {
+    padding: 20vh 20vw;
+  }
+}
+@media (min-width: 40em) {
+  .philosophy-page .content-container header {
+    height: 87vh;
   }
 }
 @media (min-width: 64em) {
@@ -677,16 +673,15 @@ footer::before {
 #programs-page .content-container header h1 {
   position: absolute;
   bottom: 0;
-  text-shadow: 1px 1px 2px rgba(15, 15, 15, 0.5);
 }
 #programs-page .content-container main section .program-info {
-  padding: 18.5vh 7.5vw;
+  padding: 7.5vh 7.5vw;
 }
 #programs-page .content-container main section #program-list {
   padding: 0rem;
 }
 #programs-page .content-container main section .program-image {
-  height: 74vh;
+  height: 54vh;
 }
 #programs-page .content-container main #infant-care .program-image {
   background-image: url(/public/src/images/page-asset/programs/infant.jpg);
@@ -704,11 +699,12 @@ footer::before {
   background-position: center;
 }
 #programs-page .content-container main .trs-txaeyc {
+  text-align: center;
   border-radius: 0rem;
   background-color: rgb(98, 131, 36);
   color: white;
   height: 74vh;
-  padding: 20vh 7.5vw;
+  padding: 15vh 7.5vw;
 }
 #programs-page .content-container main .trs-txaeyc a, #programs-page .content-container main .trs-txaeyc a:visited {
   color: white !important;
@@ -744,6 +740,11 @@ footer::before {
     text-align: center;
     padding: 25vh 0rem;
     margin: auto;
+  }
+}
+@media (min-width: 40em) {
+  #programs-page .content-container header {
+    height: 87vh;
   }
 }
 @media (min-width: 64em) {
@@ -795,12 +796,13 @@ footer::before {
 }
 #locations-page .content-container header {
   text-align: center;
-  order: 1;
-  padding: 20vh 7.5vw;
-  font-size: 1.25rem;
+  padding: 7.5vh 7.5vw;
+}
+#locations-page .content-container header h1 {
+  font-size: 1.953rem;
 }
 #locations-page .content-container main {
-  height: 74vh;
+  height: 32vh;
 }
 #locations-page .content-container main #map-container {
   height: 100%;
@@ -811,8 +813,8 @@ footer::before {
   width: 100%;
 }
 @media (min-width: 30em) {
-  #locations-page .content-container header {
-    padding: 10vh 7.5vw;
+  #locations-page .content-container header h1 {
+    font-size: 3.052rem;
   }
   #locations-page .content-container main {
     height: 50vh;
