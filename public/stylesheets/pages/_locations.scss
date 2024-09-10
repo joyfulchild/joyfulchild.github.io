@@ -4,12 +4,13 @@
         grid-template-columns: 1fr;
         header {
             text-align: center;
-            order: (1);
-            padding: 20vh 7.5vw;
-            font-size: $font-med;
+            padding: 7.5vh 7.5vw;
+            h1 {
+                font-size: $font-lg;
+            }
         }
         main {
-            height: 74vh;
+            height: 32vh;
             #map-container {
                 height: 100%;
                 width: 100%;
@@ -23,7 +24,9 @@
     @include breakpoint-up (small) {
         .content-container {
             header {
-                padding: 10vh 7.5vw;
+                h1 {
+                    font-size: $font-xxlg;
+                }
             }
             main {
                 height: 50vh;

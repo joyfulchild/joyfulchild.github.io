@@ -2,89 +2,87 @@
     .content-container {
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: 40vh 36.5vh;
         header {
-            height: 50vh;
-            background-color: rgb(98, 131, 36);
-            color: white;
-            padding: 10vh 7.5vw;
-            p {
-                max-width: 35rem;
-                margin: auto;
-            }
-            #tuition-notice {
-                margin-top: 1rem;
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0rem 7.5vw;
         }
         main {
+            height: 100%;
             section {
-                position: relative;
-                height: 74vh;
-                .text-container {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    padding: 0rem 7.5vw;
+                width: 100vw;
+                height: 95%;
+                display: flex;
+                justify-content: center;
+                align-items: center;            
+                &:not(:first-child) {
+                    margin-top: 2.5vh;
+                }
+                button {
+                    border-radius: 100px;
                     background-color: white;
-                    height: 24.6vh;
+                    color: black;
+                    border-width: 2.5px;
+                    border-top-color: #FF6347; /* Tomato */
+                    border-right-color: #66CDAA; /* Medium Aquamarine */
+                    border-bottom-color: #FFD700; /* Gold */
+                    border-left-color: #9370DB; /* Medium Purple */
+                    border-style: dashed;
+                }
+                .text-container {
+                    color: rgb(255, 255, 255);
+                    text-align: center;
                     h2 {
-                        font-size: $font-xmed;
-                        margin-bottom: 0rem;
-                    }
-                    ul {
-                        padding: 0rem;
-                        li {
-                            list-style: none;
-                            line-height: 30px;
-                            p {
-                                font-size: $font-sm !important;
-                                margin: 0rem;
-                            }
-                        }
+                        border: none;
+                        border-radius: 75px 25px 50px 0px;
                     }
                 }
             }
-            #eth {
-                background-image: url(/public/src/images/page-asset/contact/east-travis-hills-location.jpg);
-                background-size: cover;
-                background-position: center;
-            }
             #hb {
                 background-image: url(/public/src/images/page-asset/contact/hornsby-bend-location.jpg);
-                background-size: cover;
                 background-position: center;
+                background-size: cover;
+                h2 {background-color: #ff6347d5;}
+            }
+            #eth {
+                background-image: url(/public/src/images/page-asset/contact/east-travis-hills-location.jpg);
+                background-position: center;
+                background-size: cover;
+                h2 {background-color: #66cdabd2;}
             }
         }
     }
     @include breakpoint-up (small) {
-        .content-container {
-            header {
-                text-align: center;
-                padding-top: 20vh;
-                height: 74vh;
-            }
-        }
+
     }
     @include breakpoint-up (medium) {
 
     }
     @include breakpoint-up (large) {
         .content-container {
-            main {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 5vw;
+            grid-template-columns: 50vw 50vw;
+            grid-template-rows: 1fr;
+            align-items: center;
+            header {
+                display: block;
+                text-align: left;
                 padding: 0rem 7.5vw;
-                position: relative;
-                bottom: 7.5vh;
-                height: 100% !important;
+            }
+            main {
+                max-height: 86.5vh;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                -ms-overflow-style: none;  /* Internet Explorer 10+ */
+                scrollbar-width: none;  /* Firefox */
                 section {
-                    border-radius: 20px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    .text-container {
-                        border-radius: 0px 0px 20px 20px;
-                        padding: 0rem 2.5vw;
-                    }
+                    max-width: 50vw;
                 }
+            }
+            main::-webkit-scrollbar { 
+                display: none;  /* Safari and Chrome */
             }
         }
     }
