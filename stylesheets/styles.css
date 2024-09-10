@@ -526,6 +526,12 @@ footer::before {
   #contact-page .content-container main section {
     max-width: 50vw;
   }
+  #contact-page .content-container main #hb {
+    border-bottom-left-radius: 20px;
+  }
+  #contact-page .content-container main #eth {
+    border-top-left-radius: 20px;
+  }
   #contact-page .content-container main::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
