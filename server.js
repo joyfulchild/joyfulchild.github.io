@@ -15,12 +15,12 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 // Define webpage routes
 app.get('/', (req, res) => {
   res.render('index', {
-    pageTitle: 'The Joyful Child - Childcare & Preschool',
-    metaDescription: 'We provide accredited play-based child care that feels like home.',
+    pageTitle: 'Play-based Daycare & Preschool',
+    metaDescription: 'We provide an accredited play-based child care program in a home-like environment. Learn how we can bring joy to your family.',
     metaKeywords: 'the joyful child, the joyful child daycare, del valle daycare, austin daycare, del valle child care, austin child care, play-based daycare, play-based child care, daycare near me, preschool in austin, preschool in del valle',
     // Open Graph
-    ogTitle: 'The Joyful Child - Childcare & Preschool',
-    ogDescription: 'We provide accredited play-based child care that feels like home.',
+    ogTitle: 'Play-based Daycare & Preschool',
+    ogDescription: 'We provide an accredited play-based child care program in a home-like environment. Learn how we can bring joy to your family.',
     ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
     pageUrl: 'https://thejoyfulchild.care/',
   });
@@ -28,11 +28,11 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', {
     pageTitle: 'About - The Joyful Child',
-    metaDescription: 'Learn how our leadership is paving the way to provide real quality childcare.',
+    metaDescription: 'The Joyful Child was founded on the belief that all families deserve access to quality child care. Learn more about the passion and dedicated behind each young mind.',
     metaKeywords: 'the joyful child, about the joyful child, Leesa Rodriguez',
     // Open Graph
     ogTitle: 'About - The Joyful Child',
-    ogDescription: 'Learn how our leadership is paving the way to provide real quality childcare.',
+    ogDescription: 'The Joyful Child was founded on the belief that all families deserve access to quality child care. Learn more about the passion and dedicated behind each young mind.',
     ogImage: '/public/src/images/page-asset/landing/looking-bugs.jpg',
     pageUrl: 'https://thejoyfulchild.care/about/',
   });
@@ -40,11 +40,11 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
   res.render('contact', {
     pageTitle: 'Contact - The Joyful Child',
-    metaDescription: 'Are you looking for childcare? See how you can contact us about our service and childcare tuition.',
+    metaDescription: 'Are you looking for childcare? Reach out to us and we can help enroll into our program.',
     metaKeywords: 'the joyful child contact, the joyful child email, the joyful child phone number, child care tuition',
     // Open Graph
     ogTitle: 'Contact - The Joyful Child',
-    ogDescription: 'Are you looking for childcare? See how you can contact us about our service and child care tuition.',
+    ogDescription: 'Are you looking for childcare? Reach out to us and we can help enroll into our program.',
     ogImage: '/public/src/images/page-asset/contact/og-contact.jpg',
     pageUrl: 'https://thejoyfulchild.care/contact/',
   });
@@ -52,11 +52,11 @@ app.get('/contact', (req, res) => {
 app.get('/programs', (req, res) => {
   res.render('programs', {
     pageTitle: 'Programs - The Joyful Child',
-    metaDescription: 'Play-based & Nature inspired child care program.',
+    metaDescription: 'Play-based child care allows the best growth for children. Learn how our enviornment allows our children to grow naturally into themselves.',
     metaKeywords: 'Infant care, Toddler care, Preschool care, play-based child care, play based child care, early childhood education',
     // Open Graph
     ogTitle: 'Programs - The Joyful Child',
-    ogDescription: 'Play-based & Nature inspired child care program.',
+    ogDescription: 'Play-based child care allows the best growth for children. Learn how our enviornment allows our children to grow naturally into themselves.',
     ogImage: '/public/src/images/page-asset/programs/all-children.jpg',
     pageUrl: 'https://thejoyfulchild.care/programs/',
   });
@@ -64,11 +64,11 @@ app.get('/programs', (req, res) => {
 app.get('/philosophy', (req, res) => {
   res.render('philosophy', {
     pageTitle: 'Philosophy - The Joyful Child',
-    metaDescription: 'Children grow best simply by being at the center of their own journey.',
+    metaDescription: 'We believe that your child will grow best simply by being at the center of their journey.',
     metaKeywords: 'child care philosophy, the joyful child philosophy, the joyful child teaching philosophy',
     // Open Graph
     ogTitle: 'Philosophy - The Joyful Child',
-    ogDescription: 'Children grow best simply by being at the center of their own journey.',
+    ogDescription: 'We believe that your child will grow best simply by being at the center of their journey.',
     ogImage: '/public/src/images/page-asset/philosophy/child-centered.jpg',
     pageUrl: 'https://thejoyfulchild.care/philosophy/',
   });
@@ -76,11 +76,11 @@ app.get('/philosophy', (req, res) => {
 app.get('/locations', (req, res) => {
   res.render('locations', {
     pageTitle: 'Locations - The Joyful Child',
-    metaDescription: 'We provide child care for East Austin and Del Valle families.',
+    metaDescription: 'Does your family live in East Austin or Del Valle and need child care? Check which of our locations is closest to your home.',
     metaKeywords: 'the joyful child locations, child care near me, daycare near me, austin child care, del valle child care, austin daycare, del valle daycare, East Austin, Del Valle',
     // Open Graph
     ogTitle: 'Locations - The Joyful Child',
-    ogDescription: 'We provide child care for East Austin and Del Valle families.',
+    ogDescription: 'Does your family live in East Austin or Del Valle and need child care? Check which of our locations is closest to your home.',
     ogImage: '/public/src/images/page-asset/contact/hornsby-bend-location.jpg',
     pageUrl: 'https://thejoyfulchild.care/locations/',
   });
