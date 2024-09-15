@@ -1,9 +1,9 @@
 {
   "index": {
-    "pageTitle": "Play-based Daycare & Preschool",
+    "pageTitle": "Daycare & Preschool | The Joyful Child",
     "metaDescription": "We provide an accredited play-based child care program in a home-like environment. Learn how we can bring joy to your family.",
     "metaKeywords": "the joyful child, the joyful child daycare, del valle daycare, austin daycare, del valle child care, austin child care, play-based daycare, play-based child care, daycare near me, preschool in austin, preschool in del valle",
-    "ogTitle": "Play-based Daycare & Preschool",
+    "ogTitle": "Daycare & Preschool | The Joyful Child",
     "ogDescription": "We provide an accredited play-based child care program in a home-like environment. Learn how we can bring joy to your family.",
     "ogImage": "/public/src/images/page-asset/landing/looking-bugs.jpg",
     "pageUrl": "https://thejoyfulchild.care/",
@@ -30,30 +30,30 @@
     "content": "This is the contact page content."
   },
   "programs": {
-    "pageTitle": "Programs - The Joyful Child",
+    "pageTitle": "Play-based Programs | The Joyful Child",
     "metaDescription": "Play-based child care allows the best growth for children. Learn how our enviornment allows our children to grow naturally into themselves.",
     "metaKeywords": "Infant care, Toddler care, Preschool care, play-based child care, play based child care, early childhood education",
-    "ogTitle": "Programs - The Joyful Child",
+    "ogTitle": "Play-based Programs | The Joyful Child",
     "ogDescription": "Play-based child care allows the best growth for children. Learn how our enviornment allows our children to grow naturally into themselves.",
     "ogImage": "/public/src/images/page-asset/programs/all-children.jpg",
     "pageUrl": "https://thejoyfulchild.care/programs/",
     "content": "This is the programs page content."
   },
   "philosophy": {
-    "pageTitle": "Philosophy - The Joyful Child",
+    "pageTitle": "Child Centered Philosophy | The Joyful Child",
     "metaDescription": "We believe that your child will grow best simply by being at the center of their journey.",
     "metaKeywords": "child care philosophy, the joyful child philosophy, the joyful child teaching philosophy",
-    "ogTitle": "Philosophy - The Joyful Child",
+    "ogTitle": "Child Centered Philosophy | The Joyful Child",
     "ogDescription": "We believe that your child will grow best simply by being at the center of their journey.",
     "ogImage": "/public/src/images/page-asset/philosophy/child-centered.jpg",
     "pageUrl": "https://thejoyfulchild.care/philosophy/",
     "content": "This is the philosophy page content."
   },
   "locations": {
-    "pageTitle": "Locations - The Joyful Child",
+    "pageTitle": "Del Valle and Austin Child Care | The Joyful Child",
     "metaDescription": "Does your family live in East Austin or Del Valle and need child care? Check which of our locations is closest to your home.",
     "metaKeywords": "the joyful child locations, child care near me, daycare near me, austin child care, del valle child care, austin daycare, del valle daycare, East Austin, Del Valle",
-    "ogTitle": "Locations - The Joyful Child",
+    "ogTitle": "Del Valle and Austin Child Care | The Joyful Child",
     "ogDescription": "Does your family live in East Austin or Del Valle and need child care? Check which of our locations is closest to your home.",
     "ogImage": "/public/src/images/page-asset/contact/hornsby-bend-location.jpg",
     "pageUrl": "https://thejoyfulchild.care/locations/",
