@@ -2,7 +2,7 @@
     .content-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 40vh 36.5vh;
+        grid-template-rows: 74vh 76.5vh;
         header {
             display: flex;
             justify-content: center;
@@ -14,7 +14,7 @@
             height: 100%;
             section {
                 width: 100vw;
-                height: 95%;
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;            
@@ -69,7 +69,8 @@
             header {
                 display: block;
                 text-align: left;
-                padding: 0rem 7.5vw;
+                height: 100%;
+                padding-top: 25vh;
             }
             main {
                 max-height: 86.5vh;
@@ -80,11 +81,9 @@
                 section {
                     max-width: 50vw;
                 }
-                #hb {
-                    border-bottom-left-radius: 20px;
-                }
                 #eth {
                     border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
                 }
             }
             main::-webkit-scrollbar { 

@@ -44,7 +44,7 @@ nav {
         }
     }
     /* Hamburger menu for mobile */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 60em) {
         .hamburger-icon {
             display: flex;
             align-items: center;
@@ -156,22 +156,8 @@ footer::before {
 }
 @include breakpoint-up (large) {
    nav {
-    .dropdown-content {
-        display: block !important;
-        .dropdown-company-logo {
+        .close-btn, .dropbtn {
             display: none;
         }
-        a {
-            &:hover {
-                transition: ease-in-out .15s;
-            }
-            &:not(:last-of-type) {
-                margin-right: 2rem;
-            }
-        }
-    }
-    .close-btn, .dropbtn {
-        display: none;
-    }
    }
 }
