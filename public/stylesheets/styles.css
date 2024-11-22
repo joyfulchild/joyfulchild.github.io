@@ -193,7 +193,7 @@ nav .nav-links li a {
   color: #000;
   transition: color 0.3s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 60em) {
   nav {
     /* Checkbox hack for toggling menu */
     /* Transform the hamburger icon into a close (X) */
@@ -300,18 +300,6 @@ footer::before {
   }
 }
 @media (min-width: 64em) {
-  nav .dropdown-content {
-    display: block !important;
-  }
-  nav .dropdown-content .dropdown-company-logo {
-    display: none;
-  }
-  nav .dropdown-content a:hover {
-    transition: ease-in-out 0.15s;
-  }
-  nav .dropdown-content a:not(:last-of-type) {
-    margin-right: 2rem;
-  }
   nav .close-btn, nav .dropbtn {
     display: none;
   }
@@ -448,7 +436,7 @@ footer::before {
 #contact-page .content-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40vh 36.5vh;
+  grid-template-rows: 74vh 76.5vh;
 }
 #contact-page .content-container header {
   display: flex;
@@ -462,7 +450,7 @@ footer::before {
 }
 #contact-page .content-container main section {
   width: 100vw;
-  height: 95%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -514,7 +502,8 @@ footer::before {
   #contact-page .content-container header {
     display: block;
     text-align: left;
-    padding: 0rem 7.5vw;
+    height: 100%;
+    padding-top: 25vh;
   }
   #contact-page .content-container main {
     max-height: 86.5vh;
@@ -526,11 +515,9 @@ footer::before {
   #contact-page .content-container main section {
     max-width: 50vw;
   }
-  #contact-page .content-container main #hb {
-    border-bottom-left-radius: 20px;
-  }
   #contact-page .content-container main #eth {
     border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   #contact-page .content-container main::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
@@ -598,7 +585,7 @@ footer::before {
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: rgb(98, 131, 36);
+  background-color: rgb(102, 166, 75);
   height: 74vh;
   padding: 0rem 7.5vw;
 }
@@ -685,6 +672,10 @@ footer::before {
 }
 #programs-page .content-container main section #program-list {
   padding: 0rem;
+  font-size: 1.25rem;
+}
+#programs-page .content-container main section #program-list ul li:not(:last-child) {
+  margin-bottom: 0.75rem;
 }
 #programs-page .content-container main section .program-image {
   height: 54vh;
@@ -707,7 +698,7 @@ footer::before {
 #programs-page .content-container main .trs-txaeyc {
   text-align: center;
   border-radius: 0rem;
-  background-color: rgb(98, 131, 36);
+  background-color: rgb(102, 166, 75);
   color: white;
   height: 74vh;
   padding: 15vh 7.5vw;
@@ -802,13 +793,13 @@ footer::before {
 }
 #locations-page .content-container header {
   text-align: center;
-  padding: 7.5vh 7.5vw;
+  padding: 2.5vh 7.5vw;
 }
 #locations-page .content-container header h1 {
   font-size: 1.953rem;
 }
 #locations-page .content-container main {
-  height: 32vh;
+  height: 38vh;
 }
 #locations-page .content-container main #map-container {
   height: 100%;
